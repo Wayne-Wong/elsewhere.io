@@ -1,0 +1,1374 @@
+/* User-requested second edition. Kept unlayered and scoped by the body so
+   typography and layout refinements win over the first edition's breakpoints. */
+html body {
+  --font-sans: 'Nunito', 'Arial Rounded MT Bold', Arial, sans-serif;
+  font-family: var(--font-sans);
+}
+body button,
+body input {
+  font-family: var(--font-sans);
+}
+body .universe {
+  font-size: 16px;
+}
+body .wordmark {
+  font-family: var(--font-sans);
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -1.3px;
+}
+body .landing h1,
+body .setup h1,
+body .overview h1,
+body .scene-copy h1,
+body .ending h1,
+body .constellation-panel h2,
+body .memory-inspector h2,
+body .choice-card strong,
+body .character-profile h3,
+body .character-dialog h4,
+body .elsewhere-dialog [data-slot='dialog-title'],
+body .wheel-center strong {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+}
+body h1 em {
+  font-style: normal;
+  font-weight: 400;
+}
+body .landing h1 {
+  font-size: clamp(64px, 7.4vw, 110px);
+  line-height: 1.15;
+  margin: 32px 0 23px;
+  letter-spacing: -0.07em;
+}
+body .landing {
+  padding-top: clamp(140px, 24vh, 260px);
+}
+body .landing p {
+  font-size: 18px;
+  line-height: 1.75;
+}
+body .landing .eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.19em;
+}
+body .micro {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: #9a9b90;
+}
+body .gold-button {
+  font-size: 16px;
+  font-weight: 700;
+  min-height: 53px;
+  border-radius: 10px;
+}
+body .text-button {
+  font-size: 14px;
+  color: #bdb8a9;
+}
+body .memory-tag {
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-size: 15px;
+}
+body .memory-tag.tag-three {
+  left: 50%;
+  top: calc(93.36% - 40px);
+  bottom: auto;
+  transform: translateX(-50%);
+  animation: none;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+  white-space: nowrap;
+  color: #d5c4a4;
+}
+body .memory-tag.tag-three i {
+  width: 6px;
+  height: 6px;
+  box-shadow: 0 0 19px 4px #e9bd6960;
+}
+body .landing-foot {
+  font-size: 12px;
+}
+body .landing-foot button {
+  font-size: 12px;
+  min-height: 36px;
+}
+body .new-life-button,
+body .global-new-life {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: #e7ce9d;
+  background: #ba944f12;
+  border: 1px solid #c7a97470;
+  border-radius: 9px;
+  padding: 10px 17px;
+  min-height: 44px;
+  font-size: 14px;
+  font-weight: 600;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+body .new-life-button:hover,
+body .global-new-life:hover {
+  background: #96724430;
+  border-color: #dbc086;
+}
+body .global-new-life {
+  position: absolute;
+  right: 94px;
+  top: 25px;
+  z-index: 25;
+}
+body .play-top {
+  top: 86px;
+  left: 230px;
+  right: 45px;
+  z-index: 24;
+  pointer-events: auto;
+}
+body .play-top .text-button {
+  min-height: 43px;
+  padding: 8px 14px;
+  background: #121619f2;
+  border: 1px solid #70644c70;
+  border-radius: 8px;
+  color: #e8d3ae;
+  font-size: 14px;
+}
+body .play-top .eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
+body .setup {
+  padding-top: 110px;
+}
+body .setup h1 {
+  font-size: clamp(34px, 3.6vw, 50px);
+}
+body .setup-heading > p {
+  font-size: 16px;
+}
+body .constellation-node > span {
+  font-size: 13px;
+}
+body .wheel-center > span,
+body .wheel-center small {
+  font-size: 12px;
+}
+body .category-number {
+  font-size: 12px;
+}
+body .category-question {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+body .origin-option {
+  border-radius: 10px;
+  padding: 15px 16px;
+}
+body .origin-option strong {
+  font-size: 16px;
+  font-weight: 600;
+}
+body .origin-option small {
+  font-size: 14px;
+  color: #a8ada2;
+}
+body .setup-actions .text-button {
+  font-size: 14px;
+}
+body .small-next,
+body .setup-actions .gold-button {
+  font-size: 14px;
+  min-height: 46px;
+  border-radius: 8px;
+}
+body .setup-note {
+  font-size: 12px;
+  color: #979f92;
+}
+body .chapter-rail {
+  top: 160px;
+  bottom: 185px;
+}
+body .rail-title {
+  font-size: 12px;
+}
+body .chapter > span {
+  font-size: 13px;
+}
+body .chapter small {
+  font-size: 12px;
+  color: #8c9385;
+}
+body .play-stage {
+  position: absolute;
+  left: 190px;
+  right: 0;
+  top: 132px;
+  bottom: 173px;
+  height: auto;
+  margin: 0;
+  padding: 12px 50px 10px;
+  overflow-y: auto;
+  justify-content: safe center;
+  scrollbar-width: thin;
+  scrollbar-color: #6c5b3d transparent;
+}
+body .age-marker {
+  margin-bottom: 12px;
+  min-height: 56px;
+}
+body .age-line {
+  height: 14px;
+}
+body .age-label {
+  font-size: 12px;
+  margin-top: 6px;
+  letter-spacing: 0.13em;
+}
+body .scene-copy {
+  max-width: 660px;
+}
+body .scene-copy .eyebrow {
+  font-size: 12px;
+}
+body .scene-copy h1 {
+  font-size: clamp(34px, 3.4vw, 46px);
+  margin: 12px 0 15px;
+}
+body .scene-copy p {
+  font-size: 17px;
+  line-height: 1.65;
+  max-width: 625px;
+  color: #bdc0b5;
+}
+body .choice-connectors {
+  height: 43px;
+}
+body .choice-card {
+  --choice-rgb: 157, 115, 56;
+  --choice-color: #e0c28d;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 12px;
+  border-color: rgba(var(--choice-rgb), 0.44);
+  min-height: 168px;
+  padding: 16px 19px;
+  background:
+    radial-gradient(
+      ellipse at 92% 8%,
+      rgba(var(--choice-rgb), 0.22),
+      transparent 70%
+    ),
+    linear-gradient(135deg, #14171be8, #0f1116);
+  box-shadow: inset 0 1px 0 #ffffff05;
+}
+body .choice-card:after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 83% 20%, #eee5d1aa 0 0.65px, transparent 1.4px),
+    radial-gradient(circle at 62% 35%, #d6d5cf70 0 0.65px, transparent 1.2px),
+    radial-gradient(circle at 89% 52%, #ddd5bd60 0 0.8px, transparent 1.4px),
+    radial-gradient(
+      ellipse at 90% 25%,
+      rgba(var(--choice-rgb), 0.17),
+      transparent 52%
+    );
+  background-size: 100% 100%;
+  opacity: 0.65;
+  animation: nebula-breathe 8s ease-in-out infinite;
+}
+body .choice-card:hover {
+  background:
+    radial-gradient(
+      ellipse at 85% 15%,
+      rgba(var(--choice-rgb), 0.35),
+      transparent 75%
+    ),
+    #14161b;
+  border-color: var(--choice-color);
+  box-shadow: 0 10px 35px rgba(var(--choice-rgb), 0.12);
+}
+body .choice-number {
+  font-size: 12px;
+  margin-bottom: 10px;
+  color: #a3a794;
+}
+body .choice-category {
+  color: var(--choice-color);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.035em;
+  margin-bottom: 8px;
+}
+body .choice-card strong {
+  font-family: var(--font-sans);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.3;
+}
+body .choice-hint {
+  font-size: 12px;
+  color: #a3ad9c;
+  margin-top: 9px;
+}
+body .last-memory {
+  margin-top: 18px;
+  min-height: 45px;
+}
+body .last-memory > span {
+  font-size: 12px;
+}
+body .last-memory p {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-style: normal;
+  color: #b8ad94;
+}
+body .life-footer {
+  bottom: 9px;
+  left: 220px;
+  right: 42px;
+  min-height: 154px;
+  z-index: 18;
+  align-items: center;
+  background: linear-gradient(transparent, #080a0ddd 45%);
+}
+body .avatar-wrapper {
+  position: relative;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+body .avatar {
+  width: 94px;
+  height: 188px;
+  margin-top: -15px;
+  flex-shrink: 0;
+  mask-image: linear-gradient(transparent, #000 9%, #000 93%, transparent);
+}
+body .avatar-charm {
+  position: absolute;
+  right: 0;
+  top: 30%;
+  color: #edc57b;
+  filter: drop-shadow(0 0 7px #e4b65480);
+  animation: charm-orbit 7s ease-in-out infinite;
+}
+body .character-button {
+  gap: 14px;
+}
+body .character-button strong {
+  font-size: 15px;
+  font-weight: 600;
+  max-width: 140px;
+}
+body .character-button small {
+  font-size: 12px;
+  color: #a3aa98;
+}
+body .compact-stats {
+  gap: 28px;
+}
+body .compact-stats strong {
+  font-size: 18px;
+}
+body .compact-stats small {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+body .compact-stats svg {
+  width: 17px;
+  height: 17px;
+}
+body .elsewhere-dialog {
+  max-width: 470px !important;
+  border-radius: 18px !important;
+}
+body .elsewhere-dialog [data-slot='dialog-title'] {
+  font-size: 29px;
+}
+body .elsewhere-dialog [data-slot='dialog-description'] {
+  font-size: 14px;
+  line-height: 1.55;
+}
+body .setting-row {
+  font-size: 15px;
+}
+body .menu-content > button {
+  font-size: 15px;
+}
+body .menu-content > button.new-life-menu {
+  background: #d1ae6926;
+  border: 1px solid #c9ab6966;
+  border-radius: 9px;
+  padding: 14px 13px;
+  margin: 8px 0;
+  color: #ecd3a4;
+  font-weight: 700;
+}
+body .local-note,
+body .fictional-money {
+  font-size: 12px;
+  line-height: 1.5;
+}
+body .character-dialog {
+  max-width: 580px !important;
+}
+body .character-profile .avatar {
+  width: 110px;
+  height: 220px;
+  margin-top: 0;
+}
+body .character-profile .eyebrow {
+  font-size: 12px;
+}
+body .character-profile p {
+  font-size: 14px;
+}
+body .wardrobe {
+  border-top: 1px solid #ffffff14;
+  border-bottom: 1px solid #ffffff14;
+  padding: 0 0 24px;
+  margin-bottom: 25px;
+}
+body .wardrobe h4 {
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 22px 0 13px;
+}
+body .character-picker {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+body .character-picker > label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #d6c39422;
+  border-radius: 12px;
+  background: #090c0f;
+  padding: 10px 5px;
+  cursor: pointer;
+}
+body .character-picker > label.selected,
+body .outfit-picker > label.selected,
+body .charm-picker > label.selected {
+  border-color: #d8b77499;
+  background: #252218;
+}
+body .character-picker .avatar {
+  width: 56px;
+  height: 112px;
+  margin: 0;
+}
+body .character-picker > label > span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 14px;
+}
+body .wardrobe-hint {
+  font-size: 13px;
+  color: #a4ac9a;
+  margin: 0 0 14px;
+}
+body .outfit-picker {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+body .outfit-picker > label,
+body .charm-picker > label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 43px;
+  padding: 10px 8px;
+  border: 1px solid #a7a07b35;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+}
+body .outfit-picker [data-slot='radio-group-item'],
+body .charm-picker [data-slot='radio-group-item'] {
+  width: 12px;
+  height: 12px;
+}
+body .charm-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+body .charm-picker > label {
+  flex: 1;
+  font-size: 12px;
+  gap: 5px;
+}
+body .charm-picker svg {
+  color: #d5b97a;
+}
+body .force-list > div > span,
+body .finance-detail span {
+  font-size: 14px;
+}
+body .keepsakes > span {
+  font-size: 13px;
+}
+body .about-copy p {
+  font-size: 16px;
+}
+/* Semantic zoom: chapter overview or the actual decisions in one chapter. */
+body .life-atlas {
+  position: absolute;
+  left: 215px;
+  right: 40px;
+  top: 145px;
+  bottom: 175px;
+  height: auto;
+  margin: 0;
+  padding: 0 12px 24px;
+  overflow-y: auto;
+  justify-content: flex-start;
+  scrollbar-width: thin;
+  scrollbar-color: #6c5b3d transparent;
+}
+body .life-atlas h1 {
+  font-size: 38px;
+  margin: 0 0 12px;
+}
+body .overview-heading > p {
+  font-size: 15px;
+  line-height: 1.55;
+}
+body .atlas-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin: 22px 0;
+}
+body .atlas-toolbar [data-slot='tabs-list'] {
+  background: #181e22;
+  border: 1px solid #baa57940;
+  height: 44px;
+  padding: 4px;
+}
+body .atlas-toolbar [data-slot='tabs-trigger'] {
+  padding: 9px 16px;
+  font: 600 14px var(--font-sans);
+  color: #a9b1a1;
+  border-radius: 5px;
+}
+body .atlas-toolbar [data-slot='tabs-trigger'][data-active] {
+  background: #3c3425;
+  color: #e7d2aa;
+}
+body .atlas-toolbar > span {
+  font-size: 13px;
+  color: #97a08d;
+}
+body .chapter-map {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+body .chapter-constellation {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  min-height: 114px;
+  padding: 18px 16px;
+  border: 1px solid #d2b57228;
+  border-radius: 11px;
+  background:
+    radial-gradient(ellipse at 0 0, #a2843c12, transparent 75%), #101519bd;
+  color: #cfc5ac;
+  text-align: left;
+  transition:
+    background 0.25s,
+    border-color 0.25s;
+}
+body .chapter-constellation:not(:disabled):hover,
+body .chapter-constellation.now {
+  border-color: #d7b77885;
+  background: #262219c7;
+}
+body .chapter-constellation:disabled {
+  opacity: 0.4;
+}
+body .chapter-orbit {
+  width: 33px;
+  height: 33px;
+  border: 1px solid #cba46138;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #c8a76b;
+  flex-shrink: 0;
+}
+body .chapter-constellation.now .chapter-orbit {
+  box-shadow: 0 0 23px #e9be6630;
+}
+body .chapter-map-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+body .chapter-map-copy small {
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  color: #9a9c87;
+}
+body .chapter-map-copy strong {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+body .chapter-map-copy > span {
+  font-size: 12px;
+  color: #989e8c;
+}
+body .chapter-constellation > svg {
+  margin-left: auto;
+  flex-shrink: 0;
+  color: #bca66f;
+}
+body .chapter-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 18px;
+  gap: 16px;
+}
+body .chapter-navigation > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: center;
+}
+body .chapter-navigation strong {
+  font-size: 19px;
+  font-weight: 600;
+}
+body .chapter-navigation span {
+  font-size: 12px;
+  color: #98a38e;
+}
+body .chapter-navigation button {
+  min-width: 40px;
+  min-height: 40px;
+  background: #141b1c;
+  border: 1px solid #b19c6735;
+  border-radius: 8px;
+  color: #c2b084;
+  display: grid;
+  place-items: center;
+}
+body .moments-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 22px;
+}
+body .moment-tile {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-height: 125px;
+  text-align: left;
+  padding: 15px;
+  border: 1px solid #bdaa702a;
+  border-radius: 11px;
+  background: #0f1518b3;
+  color: #b4b5a4;
+  transition: border-color 0.2s;
+}
+body .moment-tile.selected {
+  border-color: #ddbf7d99;
+  background: #28241ccf;
+}
+body .moment-age {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #b7a16c;
+  letter-spacing: 0.08em;
+}
+body .moment-age i {
+  width: 5px;
+  height: 5px;
+  background: #e3bd72;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #d8b26b50;
+}
+body .moment-age small {
+  margin-left: auto;
+  font-size: 12px;
+  color: #ecd3a3;
+}
+body .moment-tile strong {
+  font-size: 16px;
+  font-weight: 600;
+  color: #d6d0bd;
+}
+body .moment-tile > span:last-child {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #a2ad96;
+}
+body .life-atlas .memory-inspector {
+  gap: 28px;
+  padding-top: 23px;
+}
+body .life-atlas .memory-inspector h2 {
+  font-size: 26px;
+}
+body .life-atlas .memory-inspector p {
+  font-size: 16px;
+  line-height: 1.65;
+}
+body .life-atlas .memory-inspector .eyebrow {
+  font-size: 12px;
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+}
+body .remembered-choice {
+  border-left: 2px solid #a58c5950;
+  padding-left: 14px;
+  margin-top: 15px;
+}
+body .remembered-choice strong {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 14px;
+  color: #d9c490;
+}
+body .remembered-choice > span {
+  font-size: 12px;
+  color: #a0b197;
+}
+body .atlas-prompt {
+  font-size: 13px;
+  color: #a7af9a;
+  margin-bottom: 7px;
+}
+body .life-atlas .alternate-choices button {
+  font-size: 14px;
+  min-height: 66px;
+  padding: 12px 15px;
+  border-radius: 10px;
+  gap: 12px;
+}
+body .life-atlas .alternate-choices button > span {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+body .life-atlas .alternate-choices small {
+  font-size: 12px;
+  font-weight: 600;
+}
+body .life-atlas .alternate-choices button.taken-choice {
+  border-color: #bcad7760;
+}
+body .atlas-bottom {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+body .atlas-bottom .gold-button {
+  font-size: 14px;
+  min-height: 46px;
+}
+body .ending {
+  padding-bottom: 190px;
+}
+body .ending h1 {
+  font-size: clamp(38px, 4vw, 60px);
+}
+body .ending > p {
+  font-size: 17px;
+}
+@keyframes nebula-breathe {
+  50% {
+    opacity: 0.9;
+    transform: scale(1.05);
+  }
+}
+@keyframes charm-orbit {
+  50% {
+    transform: translate(5px, -9px) rotate(10deg);
+  }
+}
+@media (max-width: 1050px) {
+  body .play-stage {
+    left: 145px;
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+  body .play-top {
+    left: 170px;
+    right: 28px;
+  }
+  body .life-footer {
+    left: 165px;
+    right: 25px;
+  }
+  body .compact-stats {
+    gap: 18px;
+  }
+  body .life-atlas {
+    left: 160px;
+    right: 23px;
+  }
+  body .chapter-constellation {
+    padding: 13px 11px;
+    gap: 9px;
+  }
+  body .chapter-orbit {
+    width: 25px;
+    height: 25px;
+  }
+  body .chapter-map-copy strong {
+    font-size: 14px;
+  }
+  body .chapter-constellation > svg {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  body .wordmark {
+    font-size: 25px;
+  }
+  body .landing {
+    padding: 24vh 22px 0;
+  }
+  body .landing h1 {
+    font-size: clamp(48px, 11.5vw, 72px);
+    margin: 24px 0 19px;
+    line-height: 1.15;
+  }
+  body .landing p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  body .landing .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+  }
+  body .landing .begin-wrap {
+    margin-top: 30px;
+    gap: 15px;
+  }
+  body .micro {
+    font-size: 12px;
+  }
+  body .landing-foot {
+    font-size: 12px;
+    bottom: 12px;
+  }
+  body .tag-one {
+    font-size: 12px;
+    top: 73%;
+  }
+  body .tag-two {
+    font-size: 12px;
+    top: 83%;
+  }
+  body .memory-tag.tag-three {
+    font-size: 12px;
+    display: flex;
+    top: calc(93.36% - 37px);
+  }
+  body .global-new-life {
+    right: 76px;
+    top: 20px;
+    min-height: 38px;
+    padding: 8px 10px;
+    font-size: 12px;
+    gap: 5px;
+  }
+  body .global-new-life svg {
+    width: 13px;
+  }
+  body .play-top {
+    left: 42px;
+    right: 20px;
+    top: 79px;
+    gap: 10px;
+  }
+  body .play-top .eyebrow {
+    font-size: 12px;
+    max-width: 125px;
+    line-height: 1.4;
+  }
+  body .play-top .text-button {
+    font-size: 12px;
+    min-height: 41px;
+    padding: 8px 10px;
+    flex-shrink: 0;
+    gap: 5px;
+  }
+  body .setup {
+    padding: 87px 22px 24px;
+  }
+  body .setup h1 {
+    font-size: 31px;
+    line-height: 1.25;
+  }
+  body .setup-heading > p {
+    font-size: 14px;
+    max-width: 320px;
+  }
+  body .setup-body {
+    margin-top: 12px;
+  }
+  body .constellation-node > span {
+    font-size: 12px;
+  }
+  body .constellation-art {
+    width: 42px;
+    height: 46px;
+  }
+  body .constellation-panel h2 {
+    font-size: 29px;
+  }
+  body .category-number {
+    font-size: 12px;
+  }
+  body .category-question {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  body .origin-option {
+    padding: 12px 13px;
+    gap: 12px;
+  }
+  body .origin-option strong {
+    font-size: 15px;
+  }
+  body .origin-option small {
+    font-size: 13px;
+  }
+  body .setup-actions .text-button {
+    font-size: 12px;
+  }
+  body .setup-actions .gold-button,
+  body .small-next {
+    font-size: 13px;
+  }
+  body .setup-note {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  body .chapter-rail {
+    top: 145px;
+    bottom: 157px;
+  }
+  body .play-stage {
+    left: 28px;
+    right: 0;
+    top: 133px;
+    bottom: 154px;
+    padding: 5px 22px 12px 16px;
+    height: auto;
+    justify-content: flex-start;
+    overflow-y: auto;
+  }
+  body .age-marker {
+    min-height: 44px;
+    margin-bottom: 12px;
+  }
+  body .age-line {
+    display: none;
+  }
+  body .age-label {
+    font-size: 12px;
+  }
+  body .scene-copy .eyebrow {
+    font-size: 12px;
+  }
+  body .scene-copy h1 {
+    font-size: 31px;
+    line-height: 1.2;
+    margin: 10px 0 13px;
+  }
+  body .scene-copy p {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+  body .choices-zone {
+    margin-top: 21px;
+    padding-left: 7px;
+  }
+  body .choice-card {
+    min-height: 109px;
+    grid-template-columns: 18px 1fr;
+    padding: 13px 14px;
+    column-gap: 8px;
+    row-gap: 0;
+  }
+  body .choice-number {
+    grid-row: 1/4;
+    font-size: 12px;
+    margin-top: 3px;
+  }
+  body .choice-category {
+    font-size: 12px;
+    margin-bottom: 6px;
+    grid-column: 2;
+    gap: 5px;
+  }
+  body .choice-category svg {
+    width: 12px;
+    height: 12px;
+  }
+  body .choice-card strong {
+    font-size: 17px;
+    line-height: 1.35;
+    grid-column: 2;
+  }
+  body .choice-hint {
+    font-size: 12px;
+    margin-top: 6px;
+    grid-column: 2;
+  }
+  body .last-memory > span {
+    display: block;
+    font-size: 12px;
+  }
+  body .last-memory p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  body .last-memory {
+    margin-top: 18px;
+  }
+  body .life-footer {
+    left: 37px;
+    right: 17px;
+    bottom: 5px;
+    min-height: 135px;
+    gap: 10px;
+  }
+  body .avatar {
+    width: 71px;
+    height: 142px;
+    margin-top: -8px;
+  }
+  body .character-button {
+    gap: 8px;
+  }
+  body .character-button strong {
+    font-size: 12px;
+    max-width: 95px;
+    line-height: 1.4;
+  }
+  body .character-button small {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  body .compact-stats {
+    gap: 9px;
+  }
+  body .compact-stats strong {
+    font-size: 15px;
+  }
+  body .compact-stats small {
+    font-size: 12px;
+  }
+  body .compact-stats > span:last-child {
+    display: none;
+  }
+  body .avatar-charm {
+    right: -2px;
+    top: 25%;
+  }
+  body .avatar-charm svg {
+    width: 17px;
+    height: 17px;
+  }
+  body .elsewhere-dialog {
+    padding: 23px !important;
+  }
+  body .character-profile {
+    gap: 18px;
+  }
+  body .character-profile .avatar {
+    width: 91px;
+    height: 182px;
+  }
+  body .character-profile h3 {
+    font-size: 24px;
+  }
+  body .character-picker {
+    gap: 7px;
+  }
+  body .character-picker .avatar {
+    width: 48px;
+    height: 96px;
+  }
+  body .character-picker > label > span {
+    font-size: 13px;
+  }
+  body .outfit-picker {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  body .charm-picker {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  body .charm-picker > label {
+    font-size: 12px;
+    padding: 9px 6px;
+  }
+  body .force-list {
+    gap: 18px;
+  }
+  body .force-list > div > span {
+    font-size: 13px;
+  }
+  body .life-atlas {
+    left: 33px;
+    right: 17px;
+    top: 137px;
+    bottom: 157px;
+    padding: 0 5px 24px;
+    height: auto;
+  }
+  body .life-atlas h1 {
+    font-size: 29px;
+  }
+  body .overview-heading > p {
+    font-size: 14px;
+  }
+  body .atlas-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    margin: 18px 0;
+  }
+  body .atlas-toolbar [data-slot='tabs-list'] {
+    width: 100%;
+    height: 43px;
+  }
+  body .atlas-toolbar > span {
+    font-size: 12px;
+    text-align: center;
+  }
+  body .chapter-map {
+    grid-template-columns: 1fr;
+    gap: 9px;
+  }
+  body .chapter-constellation {
+    min-height: 82px;
+    padding: 13px 15px;
+    gap: 14px;
+  }
+  body .chapter-orbit {
+    width: 30px;
+    height: 30px;
+  }
+  body .chapter-map-copy strong {
+    font-size: 16px;
+  }
+  body .chapter-map-copy small {
+    font-size: 12px;
+  }
+  body .chapter-map-copy {
+    gap: 4px;
+  }
+  body .chapter-map-copy > span {
+    font-size: 12px;
+  }
+  body .chapter-constellation > svg {
+    display: block;
+  }
+  body .moments-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  body .moment-tile {
+    min-height: 103px;
+    padding: 13px 15px;
+    gap: 8px;
+  }
+  body .moment-tile strong {
+    font-size: 17px;
+  }
+  body .moment-tile > span:last-child {
+    font-size: 13px;
+  }
+  body .life-atlas .memory-inspector {
+    grid-template-columns: 1fr;
+    gap: 19px;
+  }
+  body .life-atlas .memory-inspector h2 {
+    font-size: 25px;
+  }
+  body .life-atlas .memory-inspector p {
+    font-size: 16px;
+  }
+  body .atlas-bottom {
+    gap: 12px;
+  }
+  body .atlas-bottom .gold-button {
+    font-size: 13px;
+    padding: 0 17px;
+    gap: 13px;
+  }
+  body .ending {
+    padding-top: 140px;
+    padding-bottom: 185px;
+  }
+  body .ending h1 {
+    font-size: 35px;
+  }
+  body .ending > p {
+    font-size: 15px;
+  }
+}
+@media (max-height: 650px) and (min-width: 701px) {
+  body .play-stage {
+    bottom: 145px;
+    top: 126px;
+  }
+  body .life-footer {
+    min-height: 125px;
+  }
+  body .avatar {
+    width: 76px;
+    height: 152px;
+  }
+  body .life-atlas {
+    bottom: 145px;
+    top: 135px;
+  }
+  body .setup {
+    overflow-y: auto;
+    justify-content: flex-start;
+  }
+  body .setup-body {
+    min-height: 390px;
+  }
+}
+@media (max-height: 550px) {
+  body .universe:not(.screen-landing) {
+    height: 100dvh;
+    min-height: 100dvh;
+    overflow: hidden;
+  }
+  body .play-stage,
+  body .overview {
+    min-height: 0;
+  }
+  body .setup {
+    height: 100dvh;
+    min-height: 0;
+    overflow-y: auto;
+  }
+  body .screen-landing .landing {
+    padding-top: 80px;
+  }
+  body .screen-landing .landing h1 {
+    font-size: 44px;
+  }
+  body .screen-landing .landing p {
+    font-size: 14px;
+  }
+  body .screen-landing .landing .begin-wrap {
+    margin-top: 18px;
+    gap: 9px;
+  }
+  body .screen-landing .memory-tag.tag-three {
+    display: flex;
+  }
+  body .screen-landing .tag-one,
+  body .screen-landing .tag-two {
+    display: none;
+  }
+}
+body .choice-category,
+body .outfit-picker > label,
+body .charm-picker > label,
+body .atlas-prompt {
+  font-size: 14px;
+}
+@media (max-width: 700px) {
+  body .constellation-wheel {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    height: auto;
+    gap: 7px;
+  }
+  body .constellation-node {
+    width: 100%;
+    height: 86px;
+  }
+  body .constellation-node > span {
+    font-size: 12px;
+  }
+  body .character-button strong {
+    font-size: 14px;
+    max-width: 85px;
+  }
+  body .compact-stats {
+    gap: 9px;
+  }
+  body .compact-stats > span:nth-child(2) {
+    display: none;
+  }
+}
+@media (max-width: 380px) {
+  body .wordmark {
+    font-size: 21px;
+    left: 16px;
+    letter-spacing: -1.1px;
+  }
+  body .global-new-life {
+    right: 64px;
+    padding: 8px;
+    font-size: 12px;
+    gap: 4px;
+  }
+  body .play-top .eyebrow {
+    max-width: 88px;
+  }
+  body .play-top .text-button {
+    font-size: 12px;
+  }
+}
+@media (max-height: 550px) {
+  body .screen-play .play-stage,
+  body .screen-overview .overview,
+  body .screen-setup .setup {
+    min-height: 0;
+  }
+}
