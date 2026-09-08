@@ -33,7 +33,7 @@ The production site is written to `dist/client`. It is intentionally static: cho
 
 ## Deploy with Vercel
 
-Import this repository into Vercel and use these project settings if Vercel does not infer them automatically:
+Import this repository into Vercel. `vercel.json` pins the required build and output settings, so no dashboard build overrides are required. If you prefer to set them in the dashboard, use:
 
 | Setting | Value |
 | --- | --- |
