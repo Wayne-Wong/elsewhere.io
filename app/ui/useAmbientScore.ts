@@ -108,10 +108,22 @@ export default function useAmbientScore(enabled: boolean) {
         bar = (bar + 1) % 16;
       }
     };
-    void ac
-      .resume()
-      .then(schedule)
-      .catch(() => {});
+    // The preference is on by default. Browsers can still require a trusted tap
+    // or key press before allowing audible playback, so resume again on the
+    // first interaction rather than treating the initial policy block as mute.
+    const activate = () => {
+      void ac
+        .resume()
+        .then(() => {
+          schedule();
+          document.removeEventListener('pointerdown', activate);
+          document.removeEventListener('keydown', activate);
+        })
+        .catch(() => {});
+    };
+    activate();
+    document.addEventListener('pointerdown', activate);
+    document.addEventListener('keydown', activate);
     const timer = setInterval(schedule, 350);
     const visibility = () => {
       if (document.hidden) void ac.suspend().catch(() => {});
@@ -121,6 +133,8 @@ export default function useAmbientScore(enabled: boolean) {
     return () => {
       clearInterval(timer);
       document.removeEventListener('visibilitychange', visibility);
+      document.removeEventListener('pointerdown', activate);
+      document.removeEventListener('keydown', activate);
       master.gain.cancelScheduledValues(ac.currentTime);
       master.gain.setTargetAtTime(0, ac.currentTime, 0.08);
       setTimeout(() => {

@@ -152,7 +152,7 @@ export default function Experience() {
     [origin, setOrigin] = useState<number[]>([-1, -1, -1, -1, -1, -1]),
     [category, setCategory] = useState(0),
     [motion, setMotion] = useState(true),
-    [sound, setSound] = useState(false),
+    [sound, setSound] = useState(true),
     [modal, setModal] = useState<'menu' | 'character' | 'about' | null>(null),
     [burst, setBurst] = useState(0),
     [busy, setBusy] = useState(false),
