@@ -43,7 +43,7 @@ Import this repository into Vercel and use these project settings if Vercel does
 | Output directory | `dist/client` |
 | Node.js version | 22.x |
 
-No environment variables are needed. Do not use `npm start` for Vercel: it is a local Cloudflare Workers development command left over from the original scaffold, while Vercel should serve the static `dist/client` output.
+No environment variables are needed. Do not use `npm start` for Vercel: it is a local Cloudflare Workers development command left over from the original scaffold, while Vercel should serve the static `dist/client` output. The Vite configuration intentionally has no OpenAI Sites plugin or `.openai` metadata, so this build works independently on Vercel.
 
 ## Project structure
 
