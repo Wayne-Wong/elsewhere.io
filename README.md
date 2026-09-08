@@ -1,40 +1,60 @@
 # Elsewhere
 
-A cinematic, responsive life-exploration UI. Run `npm install`, then `npm run dev`. Build with `npm run build` using Node 22.22.0. On this Windows host, Node 24.13.0 crashes during vinext's shutdown after static prerendering; Node 22 completes successfully. Static output is `dist/client`.
+Elsewhere is a cinematic, interactive life-exploration experience. Start from six constellations, make choices across nine chapters, and revisit the alternate lives that branch from each decision.
 
-## Included in this UI edition
+## Requirements
 
-- Animated canvas constellation tree, star field, parallax and spark transitions.
-- Six selectable starting constellations; one-click randomized beginning.
-- Nine age chapters with 44 decisions per run from a curated starter content library.
-- Deterministic recombination, eligibility gates, remembered creative interests, money, keepsakes, and character changes.
-- A chapter overview and chronological decision explorer with remembered consequences, alternate choices, and an always-visible return control; earlier branches stay available.
-- Device-local autosave, JSON save export/import, and an SVG constellation keepsake.
-- Larger rounded Nunito typography, responsive touch layout, semantic choice controls, and reduced-motion preference.
-- Three illustrated characters with six outfits each and four selectable orbiting charms. Outfit changes can follow life choices or stay manually selected; appearance preferences persist locally, independently of story saves.
-- Seven editorial choice themes with quiet colored nebulas: Courage, Connection, Comfort, Discovery, Devotion, Independence, and Letting go.
-- Optional original 16-bar melodic space score, “Between stars,” with softly decaying notes and reverb. This is not a recording or arrangement of Interstellar.
+- Node.js 22.13 or later (Node 22 LTS is recommended)
+- npm
 
-## Expand the experience
+## Run locally
 
-`app/content/world.ts` contains chapters, constellation options, avatar roles, and independent event records. Add an event in its chapter with a stable ID, three authored choices, and explicit effect data. Add its three editorial categories to `app/content/choice-themes.ts`; the test checks every event has an explicit mapping. Categories describe intent, not good/bad outcomes. Optional `requires` gates follow-ups on existing facts. `app/engine/life.ts` handles eligible selection, state transitions, branch history, and validation. `app/ui/Experience.tsx` renders the interface; `Cosmos.tsx` owns background animation, `LifeMap.tsx` handles chapter/decision exploration, `Avatar.tsx` defines characters and wardrobes, and `useAmbientScore.ts` owns the original music.
+```bash
+npm ci
+npm run dev
+```
 
-Run `node tools/test-life.cjs` for simulation checks across all 729 starting combinations. Run `npm exec tsc -- --noEmit` for TypeScript validation.
+Open the local URL printed by the development server (normally `http://localhost:3000`).
 
-## Scope and next steps
+## Validate and build
 
-This release implements the UI and a playable first content edition, not all 180 cards in the longer project plan. Avatar visuals use 18 illustrated full-character variants with different gender presentations and skin tones; granular mix-and-match garment layers, wedding outfits, and broader body customization remain future asset work. Character appearance does not gate life choices. The economy is illustrative and deliberately simple: positive net monthly earnings and explicit event costs, without investments, debt, inflation, or real-world forecasts. Character details are fictional.
+```bash
+# Type-check the app
+npm exec tsc -- --noEmit
 
-Saves remain on this device and can be exported. There is no account, server database, or per-choice AI inference. Broad cultural/locality packs and a full authoring editor are later work.
+# Simulate every starting combination and validate branching logic
+node tools/test-life.cjs
 
-The optional WebMCP surface exposes `read_elsewhere_life` and `choose_elsewhere_path` where supported. Unsupported browsers simply use the visible UI.
+# Create the production static site
+npm run build
+```
 
-## Validation recorded for this edition
+The production site is written to `dist/client`. It is intentionally static: choices, saves, and avatar preferences stay in the visitor's browser; no environment variables or database are required.
 
-- TypeScript passed and the production static export completed under Node 22.
-- 2,187 complete simulated lives passed across all 729 starting combinations; all 58 event records were reached. Checks cover deterministic replay, retained alternate histories, chapter completion, and invalid-save/cycle rejection.
-- All 58 events have explicit valid choice-theme mappings. The score repeats correctly after 16 bars, with bounded MIDI notes, velocities, durations, and timing.
-- No browser visual/interaction QA was performed; the Sites workflow reserves that for an explicit browser-testing request. Responsive desktop and mobile layouts are implemented, but real-device appearance remains a review step.
-- A supported WebMCP invocation context was unavailable, so optional WebMCP tools were not runtime-verified.
-- Audio composition and scheduling were source-checked, not auditioned on the user's speakers.
-- The pinned starter's dependency audit reports upstream issues. Only static HTML, CSS, JavaScript, and artwork are deployed; RSC server functions and image-processing endpoints are not hosted. Development tooling should be updated before exposing a dev server beyond localhost.
+## Deploy with Vercel
+
+Import this repository into Vercel and use these project settings if Vercel does not infer them automatically:
+
+| Setting | Value |
+| --- | --- |
+| Framework preset | Other |
+| Install command | `npm ci` |
+| Build command | `npm run build` |
+| Output directory | `dist/client` |
+| Node.js version | 22.x |
+
+No environment variables are needed. Do not use `npm start` for Vercel: it is a local Cloudflare Workers development command left over from the original scaffold, while Vercel should serve the static `dist/client` output.
+
+## Project structure
+
+- `app/content/` — chapters, life events, and choice themes
+- `app/engine/` — deterministic branching, state, and save validation
+- `app/ui/` — interactive screens, constellation canvas, avatar wardrobe, life map, and ambient score
+- `public/` — avatar sprite art and favicon
+- `tools/test-life.cjs` — branching simulation test
+
+## Notes for contributors
+
+Every life event has exactly three choices and each choice must have an explicit theme in `app/content/choice-themes.ts`. The simulator check ensures the full event library remains reachable across the starting constellations.
+
+The included avatar artwork is original, stylized fictional character art. See `docs/avatar-art.md` for its generation notes.
